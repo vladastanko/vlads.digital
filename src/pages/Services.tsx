@@ -3,6 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { CTABanner } from "@/components/sections/CTABanner";
+import { ServiceIcon } from "@/components/ServiceIcon";
 import { useLang } from "@/i18n/LangProvider";
 import { services } from "@/data/services";
 
@@ -46,8 +47,8 @@ const Services = () => {
                 <div className="absolute right-6 top-6 inline-flex h-10 w-10 items-center justify-center rounded-full bg-surface/60 text-foreground/60 transition-all group-hover:bg-primary group-hover:text-primary-foreground">
                   <ArrowUpRight className="h-4 w-4" />
                 </div>
-                <div className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-3xl">
-                  {s.icon}
+                <div className="mb-5">
+                  <ServiceIcon href={`/${s.slug}`} size="lg" />
                 </div>
                 <h2 className="font-display text-xl font-semibold text-foreground md:text-2xl">{s.hero.title}</h2>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground md:text-base">{s.hero.subtitle}</p>

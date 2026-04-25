@@ -1,6 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLang } from "@/i18n/LangProvider";
+import { ServiceIcon } from "@/components/ServiceIcon";
 
 export const ServicesGrid = () => {
   const { t } = useLang();
@@ -30,8 +31,8 @@ export const ServicesGrid = () => {
               <div className="absolute right-5 top-5 inline-flex h-10 w-10 items-center justify-center rounded-full bg-surface/60 text-foreground/60 transition-all duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
                 <ArrowUpRight className="h-4 w-4" />
               </div>
-              <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-2xl">
-                {s.icon}
+              <div className="mb-5">
+                <ServiceIcon href={s.href} size="md" />
               </div>
               <h3 className="font-display text-lg font-semibold text-foreground">{s.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
