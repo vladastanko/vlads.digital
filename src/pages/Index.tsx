@@ -1,16 +1,33 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useEffect } from "react";
+import { Layout } from "@/components/Layout";
+import { Hero } from "@/components/sections/Hero";
+import { LogosMarquee } from "@/components/sections/LogosMarquee";
+import { ServicesGrid } from "@/components/sections/ServicesGrid";
+import { Testimonials } from "@/components/sections/Testimonials";
+import { CTABanner } from "@/components/sections/CTABanner";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
+  useEffect(() => {
+    document.title = "Vlad's Digital — Data analytics, CRO & BI for e-commerce";
+    const desc = "Premium data analytics, engineering and CRO for e-commerce and digital marketing teams. Turn data into measurable growth.";
+    let m = document.querySelector('meta[name="description"]');
+    if (!m) {
+      m = document.createElement("meta");
+      m.setAttribute("name", "description");
+      document.head.appendChild(m);
+    }
+    m.setAttribute("content", desc);
+  }, []);
+
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
-    </div>
+    <Layout>
+      <Hero />
+      <LogosMarquee />
+      <ServicesGrid />
+      <Testimonials />
+      <CTABanner />
+    </Layout>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
