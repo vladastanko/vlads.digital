@@ -295,6 +295,7 @@ const EndToEndAnalytics = () => {
       title: c.metaTitle,
       description: c.metaDesc,
       path: "/end-to-end-analytics",
+      lang,
       keywords:
         "end-to-end analytics, data pipeline, custom dashboard, BigQuery, GA4, Shopify, Looker Studio alternative, analytics system, data engineering",
       jsonLd: {
