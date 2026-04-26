@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { ArrowRight, Check } from "lucide-react";
-import { Link } from "react-router-dom";
+import { LocalizedLink as Link } from "@/components/LocalizedLink";
 import { Layout } from "@/components/Layout";
 import { CTABanner } from "@/components/sections/CTABanner";
 import { Button } from "@/components/ui/button";
@@ -22,6 +22,7 @@ export const ServicePage = ({ content }: { content: { en: ServiceContent; sr: Se
       description: seo?.description ?? c.hero.subtitle.slice(0, 158),
       keywords: seo?.keywords,
       path: `/${c.slug}`,
+      lang,
       jsonLd: {
         "@context": "https://schema.org",
         "@type": "Service",
