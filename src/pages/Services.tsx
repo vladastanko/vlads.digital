@@ -6,12 +6,20 @@ import { CTABanner } from "@/components/sections/CTABanner";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { useLang } from "@/i18n/LangProvider";
 import { services } from "@/data/services";
+import { setSEO } from "@/lib/seo";
 
 const Services = () => {
   const { lang, t } = useLang();
 
   useEffect(() => {
-    document.title = `${t.services.title} — Vlad's Digital`;
+    setSEO({
+      title: "Services — Data Analytics, CRO, SEO & Google Ads | Vlad's Digital",
+      description:
+        "Full-service data and growth offering: GA4 & GTM, BigQuery pipelines, Looker Studio dashboards, CRO, SEO audits and Google Ads tracking for ecommerce.",
+      path: "/services",
+      keywords:
+        "data analytics services, ecommerce analytics, GA4, BigQuery, Looker Studio, CRO services, SEO audit, Google Ads management",
+    });
   }, [t]);
 
   const all = Object.values(services).map((s) => s[lang]);

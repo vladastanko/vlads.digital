@@ -4,11 +4,19 @@ import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { useLang } from "@/i18n/LangProvider";
 import { posts } from "@/data/blog";
+import { setSEO } from "@/lib/seo";
 
 const Blog = () => {
   const { t } = useLang();
   useEffect(() => {
-    document.title = `${t.blog.title} — Vlad's Digital`;
+    setSEO({
+      title: "Blog — Analytics, CRO & Growth Insights | Vlad's Digital",
+      description:
+        "Insights and how-tos on ecommerce analytics, CRO, SEO, GA4 and BI dashboards. Practical playbooks to grow revenue with data.",
+      path: "/blog",
+      keywords:
+        "analytics blog, CRO blog, ecommerce growth, GA4 tutorials, SEO insights, BI dashboards",
+    });
   }, [t]);
 
   const [first, ...rest] = posts;
