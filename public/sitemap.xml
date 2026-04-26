@@ -1,77 +1,265 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Home -->
   <url>
     <loc>https://vlads.digital/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vlads.digital/" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://vlads.digital/sr" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vlads.digital/" />
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://vlads.digital/sr</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vlads.digital/" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://vlads.digital/sr" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vlads.digital/" />
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Services hub -->
+  <url>
     <loc>https://vlads.digital/services</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vlads.digital/services" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://vlads.digital/sr/services" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vlads.digital/services" />
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://vlads.digital/sr/services</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vlads.digital/services" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://vlads.digital/sr/services" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vlads.digital/services" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- End-to-end landing -->
+  <url>
     <loc>https://vlads.digital/end-to-end-analytics</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vlads.digital/end-to-end-analytics" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://vlads.digital/sr/end-to-end-analytics" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vlads.digital/end-to-end-analytics" />
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
+    <loc>https://vlads.digital/sr/end-to-end-analytics</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vlads.digital/end-to-end-analytics" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://vlads.digital/sr/end-to-end-analytics" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vlads.digital/end-to-end-analytics" />
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Service pages -->
+  <url>
     <loc>https://vlads.digital/e-commerce</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vlads.digital/e-commerce" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://vlads.digital/sr/e-commerce" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vlads.digital/e-commerce" />
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://vlads.digital/sr/e-commerce</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vlads.digital/e-commerce" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://vlads.digital/sr/e-commerce" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vlads.digital/e-commerce" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <url>
     <loc>https://vlads.digital/web-analytics</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vlads.digital/web-analytics" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://vlads.digital/sr/web-analytics" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vlads.digital/web-analytics" />
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://vlads.digital/sr/web-analytics</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vlads.digital/web-analytics" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://vlads.digital/sr/web-analytics" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vlads.digital/web-analytics" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <url>
     <loc>https://vlads.digital/cro</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vlads.digital/cro" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://vlads.digital/sr/cro" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vlads.digital/cro" />
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://vlads.digital/sr/cro</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vlads.digital/cro" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://vlads.digital/sr/cro" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vlads.digital/cro" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <url>
     <loc>https://vlads.digital/seo</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vlads.digital/seo" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://vlads.digital/sr/seo" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vlads.digital/seo" />
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://vlads.digital/sr/seo</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vlads.digital/seo" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://vlads.digital/sr/seo" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vlads.digital/seo" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <url>
     <loc>https://vlads.digital/ads</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vlads.digital/ads" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://vlads.digital/sr/ads" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vlads.digital/ads" />
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://vlads.digital/sr/ads</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vlads.digital/ads" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://vlads.digital/sr/ads" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vlads.digital/ads" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <url>
     <loc>https://vlads.digital/reports</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vlads.digital/reports" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://vlads.digital/sr/reports" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vlads.digital/reports" />
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://vlads.digital/sr/reports</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vlads.digital/reports" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://vlads.digital/sr/reports" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vlads.digital/reports" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog -->
+  <url>
     <loc>https://vlads.digital/blog</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vlads.digital/blog" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://vlads.digital/sr/blog" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vlads.digital/blog" />
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://vlads.digital/sr/blog</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vlads.digital/blog" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://vlads.digital/sr/blog" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vlads.digital/blog" />
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>https://vlads.digital/blog/cro-strategies-2026</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vlads.digital/blog/cro-strategies-2026" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://vlads.digital/sr/blog/cro-strategies-2026" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vlads.digital/blog/cro-strategies-2026" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://vlads.digital/sr/blog/cro-strategies-2026</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vlads.digital/blog/cro-strategies-2026" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://vlads.digital/sr/blog/cro-strategies-2026" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vlads.digital/blog/cro-strategies-2026" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
   <url>
     <loc>https://vlads.digital/blog/effective-website-dashboard</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vlads.digital/blog/effective-website-dashboard" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://vlads.digital/sr/blog/effective-website-dashboard" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vlads.digital/blog/effective-website-dashboard" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://vlads.digital/sr/blog/effective-website-dashboard</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vlads.digital/blog/effective-website-dashboard" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://vlads.digital/sr/blog/effective-website-dashboard" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vlads.digital/blog/effective-website-dashboard" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
   <url>
     <loc>https://vlads.digital/blog/product-analytics-2026</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vlads.digital/blog/product-analytics-2026" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://vlads.digital/sr/blog/product-analytics-2026" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vlads.digital/blog/product-analytics-2026" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://vlads.digital/sr/blog/product-analytics-2026</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vlads.digital/blog/product-analytics-2026" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://vlads.digital/sr/blog/product-analytics-2026" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vlads.digital/blog/product-analytics-2026" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
   <url>
     <loc>https://vlads.digital/blog/seo-analysis-gsc-2026</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vlads.digital/blog/seo-analysis-gsc-2026" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://vlads.digital/sr/blog/seo-analysis-gsc-2026" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vlads.digital/blog/seo-analysis-gsc-2026" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://vlads.digital/sr/blog/seo-analysis-gsc-2026</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vlads.digital/blog/seo-analysis-gsc-2026" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://vlads.digital/sr/blog/seo-analysis-gsc-2026" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vlads.digital/blog/seo-analysis-gsc-2026" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
     <loc>https://vlads.digital/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vlads.digital/contact" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://vlads.digital/sr/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vlads.digital/contact" />
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://vlads.digital/sr/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vlads.digital/contact" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://vlads.digital/sr/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vlads.digital/contact" />
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>

@@ -1,5 +1,5 @@
 import { CheckCircle2 } from "lucide-react";
-import { Link } from "react-router-dom";
+import { LocalizedLink as Link } from "@/components/LocalizedLink";
 import { Layout } from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { useLang } from "@/i18n/LangProvider";

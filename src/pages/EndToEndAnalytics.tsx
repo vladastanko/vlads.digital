@@ -295,6 +295,7 @@ const EndToEndAnalytics = () => {
       title: c.metaTitle,
       description: c.metaDesc,
       path: "/end-to-end-analytics",
+      lang,
       keywords:
         "end-to-end analytics, data pipeline, custom dashboard, BigQuery, GA4, Shopify, Looker Studio alternative, analytics system, data engineering",
       jsonLd: {
@@ -311,7 +312,7 @@ const EndToEndAnalytics = () => {
         offers: { "@type": "Offer", priceCurrency: "USD", price: "500", url: "https://vlads.digital/end-to-end-analytics" },
       },
     });
-  }, [c]);
+  }, [c, lang]);
 
   return (
     <div className="flex min-h-screen flex-col">

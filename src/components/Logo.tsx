@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { LocalizedLink as Link } from "./LocalizedLink";
 
 export const Logo = ({ className = "" }: { className?: string }) => (
   <Link to="/" className={`group inline-flex items-center gap-2.5 ${className}`}>

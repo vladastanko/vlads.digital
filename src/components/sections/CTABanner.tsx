@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { LocalizedLink as Link } from "@/components/LocalizedLink";
 import { Button } from "@/components/ui/button";
 import { useLang } from "@/i18n/LangProvider";
 

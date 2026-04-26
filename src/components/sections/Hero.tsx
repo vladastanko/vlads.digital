@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLang } from "@/i18n/LangProvider";
-import { Link } from "react-router-dom";
+import { LocalizedLink as Link } from "@/components/LocalizedLink";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const CALENDLY = "https://calendly.com/vladsdigital444/30min";

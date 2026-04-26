@@ -21,31 +21,40 @@ import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
 
+const routes = (
+  <>
+    <Route index element={<Index />} />
+    <Route path="services" element={<Services />} />
+    <Route path="e-commerce" element={<ECommerce />} />
+    <Route path="web-analytics" element={<WebAnalytics />} />
+    <Route path="cro" element={<CRO />} />
+    <Route path="seo" element={<SEO />} />
+    <Route path="ads" element={<Ads />} />
+    <Route path="reports" element={<Reports />} />
+    <Route path="blog" element={<Blog />} />
+    <Route path="blog/:slug" element={<BlogPost />} />
+    <Route path="contact" element={<Contact />} />
+    <Route path="thank-you" element={<ThankYou />} />
+    <Route path="end-to-end-analytics" element={<EndToEndAnalytics />} />
+  </>
+);
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <LangProvider>
-        <BrowserRouter>
+      <BrowserRouter>
+        <LangProvider>
           <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/e-commerce" element={<ECommerce />} />
-            <Route path="/web-analytics" element={<WebAnalytics />} />
-            <Route path="/cro" element={<CRO />} />
-            <Route path="/seo" element={<SEO />} />
-            <Route path="/ads" element={<Ads />} />
-            <Route path="/reports" element={<Reports />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/blog/:slug" element={<BlogPost />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/thank-you" element={<ThankYou />} />
-            <Route path="/end-to-end-analytics" element={<EndToEndAnalytics />} />
+            {/* English (default) */}
+            <Route path="/">{routes}</Route>
+            {/* Serbian */}
+            <Route path="/sr">{routes}</Route>
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </BrowserRouter>
-      </LangProvider>
+        </LangProvider>
+      </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
 );

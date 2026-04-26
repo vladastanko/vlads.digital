@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { ArrowLeft } from "lucide-react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { LocalizedLink as Link } from "@/components/LocalizedLink";
 import { Layout } from "@/components/Layout";
 import { CTABanner } from "@/components/sections/CTABanner";
 import { useLang } from "@/i18n/LangProvider";
@@ -10,7 +11,7 @@ import NotFound from "./NotFound";
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
-  const { t } = useLang();
+  const { lang, t } = useLang();
   const post = slug ? getPost(slug) : undefined;
 
   useEffect(() => {
@@ -19,6 +20,7 @@ const BlogPost = () => {
         title: `${post.title} | Vlad's Digital`,
         description: post.excerpt,
         path: `/blog/${post.slug}`,
+        lang,
         type: "article",
         keywords: `${post.category}, analytics, ecommerce, CRO, SEO`,
         jsonLd: {
@@ -38,7 +40,7 @@ const BlogPost = () => {
         },
       });
     }
-  }, [post]);
+  }, [post, lang]);
 
   if (!post) return <NotFound />;
 
