@@ -25,6 +25,7 @@ import { Footer } from "@/components/Footer";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { Button } from "@/components/ui/button";
 import { useLang } from "@/i18n/LangProvider";
+import { setSEO } from "@/lib/seo";
 
 const CALENDLY = "https://calendly.com/vladsdigital444/30min";
 
@@ -290,14 +291,26 @@ const EndToEndAnalytics = () => {
   const c = copy[lang];
 
   useEffect(() => {
-    document.title = c.metaTitle;
-    let m = document.querySelector('meta[name="description"]');
-    if (!m) {
-      m = document.createElement("meta");
-      m.setAttribute("name", "description");
-      document.head.appendChild(m);
-    }
-    m.setAttribute("content", c.metaDesc);
+    setSEO({
+      title: c.metaTitle,
+      description: c.metaDesc,
+      path: "/end-to-end-analytics",
+      keywords:
+        "end-to-end analytics, data pipeline, custom dashboard, BigQuery, GA4, Shopify, Looker Studio alternative, analytics system, data engineering",
+      jsonLd: {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: "End-to-End Analytics System",
+        description: c.metaDesc,
+        provider: {
+          "@type": "ProfessionalService",
+          name: "Vlad's Digital",
+          url: "https://vlads.digital/",
+        },
+        areaServed: "Worldwide",
+        offers: { "@type": "Offer", priceCurrency: "USD", price: "500", url: "https://vlads.digital/end-to-end-analytics" },
+      },
+    });
   }, [c]);
 
   return (

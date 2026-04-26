@@ -5,6 +5,7 @@ import { Layout } from "@/components/Layout";
 import { CTABanner } from "@/components/sections/CTABanner";
 import { useLang } from "@/i18n/LangProvider";
 import { getPost, posts } from "@/data/blog";
+import { setSEO, SITE } from "@/lib/seo";
 import NotFound from "./NotFound";
 
 const BlogPost = () => {
@@ -14,14 +15,28 @@ const BlogPost = () => {
 
   useEffect(() => {
     if (post) {
-      document.title = `${post.title} — Vlad's Digital`;
-      let m = document.querySelector('meta[name="description"]');
-      if (!m) {
-        m = document.createElement("meta");
-        m.setAttribute("name", "description");
-        document.head.appendChild(m);
-      }
-      m.setAttribute("content", post.excerpt);
+      setSEO({
+        title: `${post.title} | Vlad's Digital`,
+        description: post.excerpt,
+        path: `/blog/${post.slug}`,
+        type: "article",
+        keywords: `${post.category}, analytics, ecommerce, CRO, SEO`,
+        jsonLd: {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          headline: post.title,
+          description: post.excerpt,
+          datePublished: post.date,
+          author: { "@type": "Person", name: "Vladimir S." },
+          publisher: {
+            "@type": "Organization",
+            name: "Vlad's Digital",
+            logo: { "@type": "ImageObject", url: `${SITE}/og-image.png` },
+          },
+          mainEntityOfPage: `${SITE}/blog/${post.slug}`,
+          articleSection: post.category,
+        },
+      });
     }
   }, [post]);
 

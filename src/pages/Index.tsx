@@ -5,18 +5,28 @@ import { LogosMarquee } from "@/components/sections/LogosMarquee";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { CTABanner } from "@/components/sections/CTABanner";
+import { setSEO } from "@/lib/seo";
 
 const Index = () => {
   useEffect(() => {
-    document.title = "Vlad's Digital — Data analytics, CRO & BI for e-commerce";
-    const desc = "Premium data analytics, engineering and CRO for e-commerce and digital marketing teams. Turn data into measurable growth.";
-    let m = document.querySelector('meta[name="description"]');
-    if (!m) {
-      m = document.createElement("meta");
-      m.setAttribute("name", "description");
-      document.head.appendChild(m);
-    }
-    m.setAttribute("content", desc);
+    setSEO({
+      title: "Vlad's Digital — Data Analytics, CRO & BI for Ecommerce",
+      description:
+        "Premium data analytics, engineering and CRO for ecommerce and marketing teams. GA4, BigQuery, Looker Studio dashboards and Google Ads tracking that drive measurable growth.",
+      path: "/",
+      keywords:
+        "data analytics agency, ecommerce analytics, GA4 consultant, Looker Studio, BigQuery, CRO, conversion optimization, Google Ads tracking, BI dashboards, Shopify analytics",
+      jsonLd: {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        name: "Vlad's Digital",
+        url: "https://vlads.digital/",
+        description:
+          "Data analytics, engineering and CRO for ecommerce and digital marketing teams.",
+        areaServed: "Worldwide",
+        founder: { "@type": "Person", name: "Vladimir S." },
+      },
+    });
   }, []);
 
   return (

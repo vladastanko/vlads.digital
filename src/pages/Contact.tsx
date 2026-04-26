@@ -4,6 +4,7 @@ import { Mail, MapPin, Phone, Send, CheckCircle2 } from "lucide-react";
 import { Layout } from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { useLang } from "@/i18n/LangProvider";
+import { setSEO } from "@/lib/seo";
 
 const Contact = () => {
   const { t } = useLang();
@@ -12,7 +13,14 @@ const Contact = () => {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    document.title = `${t.contact.title} — Vlad's Digital`;
+    setSEO({
+      title: "Contact — Book a Free Analytics Call | Vlad's Digital",
+      description:
+        "Get in touch with Vlad's Digital. Book a free 30-minute call to discuss your analytics, CRO, SEO or Google Ads project.",
+      path: "/contact",
+      keywords:
+        "contact data analyst, book analytics call, free consultation, ecommerce analytics expert",
+    });
   }, [t]);
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {

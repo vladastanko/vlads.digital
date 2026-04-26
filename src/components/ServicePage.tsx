@@ -6,6 +6,8 @@ import { CTABanner } from "@/components/sections/CTABanner";
 import { Button } from "@/components/ui/button";
 import { useLang } from "@/i18n/LangProvider";
 import type { ServiceContent } from "@/data/services";
+import { serviceSEO } from "@/data/serviceSEO";
+import { setSEO } from "@/lib/seo";
 
 const CALENDLY = "https://calendly.com/vladsdigital444/30min";
 
@@ -14,15 +16,27 @@ export const ServicePage = ({ content }: { content: { en: ServiceContent; sr: Se
   const c = content[lang];
 
   useEffect(() => {
-    document.title = `${c.hero.title} — Vlad's Digital`;
-    let m = document.querySelector('meta[name="description"]');
-    if (!m) {
-      m = document.createElement("meta");
-      m.setAttribute("name", "description");
-      document.head.appendChild(m);
-    }
-    m.setAttribute("content", c.hero.subtitle.slice(0, 158));
-  }, [c]);
+    const seo = serviceSEO[c.slug]?.[lang];
+    setSEO({
+      title: seo?.title ?? `${c.hero.title} — Vlad's Digital`,
+      description: seo?.description ?? c.hero.subtitle.slice(0, 158),
+      keywords: seo?.keywords,
+      path: `/${c.slug}`,
+      jsonLd: {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: c.hero.title,
+        description: seo?.description ?? c.hero.subtitle,
+        provider: {
+          "@type": "ProfessionalService",
+          name: "Vlad's Digital",
+          url: "https://vlads.digital/",
+        },
+        areaServed: "Worldwide",
+        url: `https://vlads.digital/${c.slug}`,
+      },
+    });
+  }, [c, lang]);
 
   return (
     <Layout>
