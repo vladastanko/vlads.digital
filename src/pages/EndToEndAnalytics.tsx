@@ -312,7 +312,7 @@ const EndToEndAnalytics = () => {
         offers: { "@type": "Offer", priceCurrency: "USD", price: "500", url: "https://vlads.digital/end-to-end-analytics" },
       },
     });
-  }, [c]);
+  }, [c, lang]);
 
   return (
     <div className="flex min-h-screen flex-col">
