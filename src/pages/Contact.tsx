@@ -1,27 +1,33 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { Mail, MapPin, Phone, Send, CheckCircle2 } from "lucide-react";
+import { LocalizedLink as Link } from "@/components/LocalizedLink";
 import { Layout } from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { useLang } from "@/i18n/LangProvider";
 import { setSEO } from "@/lib/seo";
 
 const Contact = () => {
-  const { t } = useLang();
+  const { lang, t } = useLang();
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     setSEO({
-      title: "Contact — Book a Free Analytics Call | Vlad's Digital",
+      title:
+        lang === "sr"
+          ? "Kontakt — zakaži besplatan analytics poziv | Vlad's Digital"
+          : "Contact — Book a Free Analytics Call | Vlad's Digital",
       description:
-        "Get in touch with Vlad's Digital. Book a free 30-minute call to discuss your analytics, CRO, SEO or Google Ads project.",
+        lang === "sr"
+          ? "Kontaktiraj Vlad's Digital. Zakaži besplatan 30-min poziv za analitiku, CRO, SEO ili Google Ads."
+          : "Get in touch with Vlad's Digital. Book a free 30-minute call to discuss your analytics, CRO, SEO or Google Ads project.",
       path: "/contact",
+      lang,
       keywords:
         "contact data analyst, book analytics call, free consultation, ecommerce analytics expert",
     });
-  }, [t]);
+  }, [lang, t]);
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

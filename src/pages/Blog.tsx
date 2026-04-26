@@ -1,23 +1,29 @@
 import { useEffect } from "react";
 import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { LocalizedLink as Link } from "@/components/LocalizedLink";
 import { Layout } from "@/components/Layout";
 import { useLang } from "@/i18n/LangProvider";
 import { posts } from "@/data/blog";
 import { setSEO } from "@/lib/seo";
 
 const Blog = () => {
-  const { t } = useLang();
+  const { lang, t } = useLang();
   useEffect(() => {
     setSEO({
-      title: "Blog — Analytics, CRO & Growth Insights | Vlad's Digital",
+      title:
+        lang === "sr"
+          ? "Blog — Analitika, CRO i growth uvidi | Vlad's Digital"
+          : "Blog — Analytics, CRO & Growth Insights | Vlad's Digital",
       description:
-        "Insights and how-tos on ecommerce analytics, CRO, SEO, GA4 and BI dashboards. Practical playbooks to grow revenue with data.",
+        lang === "sr"
+          ? "Praktični uvidi i playbook-ovi za e-commerce analitiku, CRO, SEO, GA4 i BI dashboarde."
+          : "Insights and how-tos on ecommerce analytics, CRO, SEO, GA4 and BI dashboards. Practical playbooks to grow revenue with data.",
       path: "/blog",
+      lang,
       keywords:
         "analytics blog, CRO blog, ecommerce growth, GA4 tutorials, SEO insights, BI dashboards",
     });
-  }, [t]);
+  }, [lang, t]);
 
   const [first, ...rest] = posts;
 
