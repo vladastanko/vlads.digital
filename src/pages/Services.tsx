@@ -1,11 +1,12 @@
 import { useEffect } from "react";
 import { ArrowUpRight } from "lucide-react";
-import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { CTABanner } from "@/components/sections/CTABanner";
 import { ServiceIcon } from "@/components/ServiceIcon";
+import { LocalizedLink } from "@/components/LocalizedLink";
 import { useLang } from "@/i18n/LangProvider";
 import { services } from "@/data/services";
+import { getServiceCover } from "@/data/serviceCovers";
 import { setSEO } from "@/lib/seo";
 
 const Services = () => {
@@ -13,14 +14,20 @@ const Services = () => {
 
   useEffect(() => {
     setSEO({
-      title: "Services — Data Analytics, CRO, SEO & Google Ads | Vlad's Digital",
+      title:
+        lang === "sr"
+          ? "Usluge — Data analitika, CRO, SEO i Google Ads | Vlad's Digital"
+          : "Services — Data Analytics, CRO, SEO & Google Ads | Vlad's Digital",
       description:
-        "Full-service data and growth offering: GA4 & GTM, BigQuery pipelines, Looker Studio dashboards, CRO, SEO audits and Google Ads tracking for ecommerce.",
+        lang === "sr"
+          ? "Kompletna ponuda data i growth usluga: GA4 i GTM, BigQuery pipeline-i, Looker Studio dashboardi, CRO, SEO audit i Google Ads tracking za e-commerce."
+          : "Full-service data and growth offering: GA4 & GTM, BigQuery pipelines, Looker Studio dashboards, CRO, SEO audits and Google Ads tracking for ecommerce.",
       path: "/services",
+      lang,
       keywords:
         "data analytics services, ecommerce analytics, GA4, BigQuery, Looker Studio, CRO services, SEO audit, Google Ads management",
     });
-  }, [t]);
+  }, [lang, t]);
 
   const all = Object.values(services).map((s) => s[lang]);
 
@@ -45,23 +52,42 @@ const Services = () => {
 
       <section className="pb-16 md:pb-24">
         <div className="container-x">
-          <div className="grid gap-5 md:grid-cols-2">
-            {all.map((s) => (
-              <Link
-                key={s.slug}
-                to={`/${s.slug}`}
-                className="group relative overflow-hidden rounded-2xl border border-border bg-gradient-card p-8 backdrop-blur transition-all hover:-translate-y-1 hover:border-primary/40 hover:shadow-elegant"
-              >
-                <div className="absolute right-6 top-6 inline-flex h-10 w-10 items-center justify-center rounded-full bg-surface/60 text-foreground/60 transition-all group-hover:bg-primary group-hover:text-primary-foreground">
-                  <ArrowUpRight className="h-4 w-4" />
-                </div>
-                <div className="mb-5">
-                  <ServiceIcon href={`/${s.slug}`} size="lg" />
-                </div>
-                <h2 className="font-display text-xl font-semibold text-foreground md:text-2xl">{s.hero.title}</h2>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground md:text-base">{s.hero.subtitle}</p>
-              </Link>
-            ))}
+          <div className="grid gap-6 md:grid-cols-2">
+            {all.map((s) => {
+              const href = `/${s.slug}`;
+              const cover = getServiceCover(href);
+              return (
+                <LocalizedLink
+                  key={s.slug}
+                  to={href}
+                  className="group relative flex flex-col overflow-hidden rounded-2xl border border-border bg-gradient-card backdrop-blur transition-all hover:-translate-y-1 hover:border-primary/40 hover:shadow-elegant"
+                >
+                  <div className="relative aspect-[16/9] w-full overflow-hidden">
+                    {cover && (
+                      <img
+                        src={cover}
+                        alt=""
+                        width={1280}
+                        height={720}
+                        loading="lazy"
+                        className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
+                    <div className="absolute left-6 top-6">
+                      <ServiceIcon href={href} size="lg" />
+                    </div>
+                    <div className="absolute right-6 top-6 inline-flex h-10 w-10 items-center justify-center rounded-full bg-background/70 text-foreground/80 backdrop-blur transition-all group-hover:bg-primary group-hover:text-primary-foreground">
+                      <ArrowUpRight className="h-4 w-4" />
+                    </div>
+                  </div>
+                  <div className="flex flex-1 flex-col p-8">
+                    <h2 className="font-display text-xl font-semibold text-foreground md:text-2xl">{s.hero.title}</h2>
+                    <p className="mt-3 text-sm leading-relaxed text-muted-foreground md:text-base">{s.hero.subtitle}</p>
+                  </div>
+                </LocalizedLink>
+              );
+            })}
           </div>
         </div>
       </section>
