@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
 import { Globe, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLang } from "@/i18n/LangProvider";
+import { LocalizedLink, LocalizedNavLink } from "./LocalizedLink";
 import { Logo } from "./Logo";
 
 const CALENDLY = "https://calendly.com/vladsdigital444/30min";
@@ -26,7 +26,7 @@ export const Header = () => {
 
         <nav className="hidden items-center gap-1 md:flex">
           {items.map((it) => (
-            <NavLink
+            <LocalizedNavLink
               key={it.to}
               to={it.to}
               end={it.to === "/"}
@@ -37,7 +37,7 @@ export const Header = () => {
               }
             >
               {it.label}
-            </NavLink>
+            </LocalizedNavLink>
           ))}
         </nav>
 
@@ -89,14 +89,14 @@ export const Header = () => {
         <div className="border-t border-border/50 bg-background/95 backdrop-blur md:hidden">
           <div className="container-x flex flex-col py-4">
             {items.map((it) => (
-              <Link
+              <LocalizedLink
                 key={it.to}
                 to={it.to}
                 onClick={() => setOpen(false)}
                 className="border-b border-border/40 py-3 text-base text-foreground/80 last:border-0 hover:text-primary"
               >
                 {it.label}
-              </Link>
+              </LocalizedLink>
             ))}
             <Button asChild variant="hero" className="mt-4">
               <a href={CALENDLY} target="_blank" rel="noreferrer">

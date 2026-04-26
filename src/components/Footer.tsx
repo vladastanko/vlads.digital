@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Linkedin } from "lucide-react";
 import { useLang } from "@/i18n/LangProvider";
+import { LocalizedLink as Link } from "./LocalizedLink";
 import { Logo } from "./Logo";
 
 export const Footer = () => {
