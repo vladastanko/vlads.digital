@@ -1,6 +1,7 @@
 import { ArrowRight, BarChart3, CalendarCheck, CheckCircle2, Clock, ShieldCheck, Sparkles, Target, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Logo } from "@/components/Logo";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { useLang } from "@/i18n/LangProvider";
 import { setSEO } from "@/lib/seo";
@@ -126,17 +127,7 @@ const Book = () => {
 
   return (
     <div className="flex min-h-screen flex-col">
-      {/* Minimal header — no nav, no distractions */}
-      <header className="sticky top-0 z-50 border-b border-border/50 bg-background/70 backdrop-blur-xl">
-        <div className="container-x flex h-18 items-center justify-between py-4">
-          <Logo />
-          <Button asChild variant="hero" size="default" className="hidden sm:inline-flex">
-            <a href={CALENDLY} target="_blank" rel="noreferrer">
-              {c.cta} <ArrowRight className="h-4 w-4" />
-            </a>
-          </Button>
-        </div>
-      </header>
+      <Header />
 
       <main className="flex-1">
         {/* HERO */}
@@ -274,11 +265,7 @@ const Book = () => {
         </section>
       </main>
 
-      <footer className="border-t border-border/50 py-8">
-        <div className="container-x text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Vlad's Digital
-        </div>
-      </footer>
+      <Footer />
 
       <WhatsAppFloat />
     </div>
