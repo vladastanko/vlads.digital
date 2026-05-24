@@ -17,6 +17,7 @@ import BlogPost from "./pages/BlogPost.tsx";
 import Contact from "./pages/Contact.tsx";
 import ThankYou from "./pages/ThankYou.tsx";
 import EndToEndAnalytics from "./pages/EndToEndAnalytics.tsx";
+import Book from "./pages/Book.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -36,6 +37,9 @@ const routes = (
     <Route path="contact" element={<Contact />} />
     <Route path="thank-you" element={<ThankYou />} />
     <Route path="end-to-end-analytics" element={<EndToEndAnalytics />} />
+    <Route path="book" element={<Book />} />
+    <Route path="ads-lp" element={<Book />} />
+    <Route path="email-lp" element={<Book />} />
   </>
 );
 
