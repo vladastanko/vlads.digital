@@ -16,7 +16,7 @@ export const Footer = () => {
               Turning complex data into measurable growth.
             </p>
             <div className="flex items-center gap-3 pt-2">
-              <a href="mailto:vladsdigital444@gmail.com" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-surface/60 text-foreground/80 transition-colors hover:border-primary/60 hover:text-primary">
+              <a href="mailto:vladastankovic95@hotmail.com" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-surface/60 text-foreground/80 transition-colors hover:border-primary/60 hover:text-primary">
                 <Mail className="h-4 w-4" />
               </a>
               <a href="tel:+381631880715" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-surface/60 text-foreground/80 transition-colors hover:border-primary/60 hover:text-primary">
@@ -49,7 +49,7 @@ export const Footer = () => {
               </li>
               <li className="flex items-start gap-2.5">
                 <Mail className="mt-0.5 h-4 w-4 text-primary shrink-0" />
-                <a href="mailto:vladsdigital444@gmail.com" className="hover:text-primary">vladsdigital444@gmail.com</a>
+                <a href="mailto:vladastankovic95@hotmail.com" className="hover:text-primary">vladastankovic95@hotmail.com</a>
               </li>
               <li className="flex items-start gap-2.5">
                 <Phone className="mt-0.5 h-4 w-4 text-primary shrink-0" />

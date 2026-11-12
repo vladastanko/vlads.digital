@@ -123,7 +123,7 @@ const Contact = () => {
                 {t.contact.addressValue}
               </InfoCard>
               <InfoCard icon={<Mail className="h-5 w-5" />} label={t.contact.emailLabel}>
-                <a href="mailto:vladsdigital444@gmail.com" className="hover:text-primary">vladsdigital444@gmail.com</a>
+                <a href="mailto:vladastankovic95@hotmail.com" className="hover:text-primary">vladastankovic95@hotmail.com</a>
               </InfoCard>
               <InfoCard icon={<Phone className="h-5 w-5" />} label={t.contact.callLabel}>
                 <a href="tel:+381631880715" className="hover:text-primary">+381 63 188 0715</a>
